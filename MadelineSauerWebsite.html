@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Madeline Sauer's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #c2185b; /* dark pink */
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 300px;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 18px;
+            font-size: 14px;
+            color: white;
+            background-color: #c2185b; /* dark pink */
+            border: none;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Madeline Sauer's Website</h1>
+
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName">
+
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName">
+
+    <label for="year">Year in College</label>
+    <input type="text" id="year">
+
+    <label for="major">Major</label>
+    <input type="text" id="major">
+
+    <button onclick="displayInfo()">Enter</button>
+
+    <div id="output"></div>
+
+    <script>
+        function displayInfo() {
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const year = document.getElementById("year").value;
+            const major = document.getElementById("major").value;
+
+            document.getElementById("output").textContent =
+                "Student Description: " +
+                firstName + " " + lastName + " is a " +
+                year.toLowerCase() + " looking for a job in " + major;
+        }
+    </script>
+
+</body>
+</html>
